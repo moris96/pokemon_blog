@@ -4,10 +4,14 @@ const express = require('express')
 const methodOverride = require('method-override')
 const db = require('./models/db')
 const app = express()
+const cors = require('cors') //who's allowed access to API 
 
 // Configure the app (app.set)
 /*Start Config */
 app.use(express.urlencoded({ extended: true })) // This code makes us have req.body
+app.use(cors());
+// right below urlencoded
+app.use(express.json());
 app.use((req, res, next) => {
   res.locals.data = {}
   next()
