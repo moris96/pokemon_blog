@@ -1,5 +1,5 @@
-const { update } = require('../models/pokemon');
-const Pokemon = require('../models/pokemon');
+const { update } = require('../models/pokemon')
+const Pokemon = require('../models/pokemon')
 
 const dataController = {
     //Index,
@@ -63,7 +63,7 @@ const dataController = {
             if(err){
                 res.status(404).send({
                     msg: err.message,
-                    output: 'Could not find a blog post with that ID'
+                    output: 'Could not find a pokemon with that ID'
                 })
             } else {
                 res.locals.data.pokemon = foundPokemon
@@ -71,6 +71,6 @@ const dataController = {
             }
         })
     }
-};
+}
 
 module.exports = dataController

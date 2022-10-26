@@ -1,4 +1,4 @@
-const React = require('react');
+const React = require('react')
 
 class Default extends React.Component {
     render(){
@@ -11,10 +11,10 @@ class Default extends React.Component {
                 </head>
                 <body>
                     <nav>
-                        <a href="/pokemon">Home Page for Pokemon Blog</a><br/>
-                        <a href="/pokemon/new">Add New Comment</a><br/>
-                        { pokemon? <a href={`/pokemon/${pokemon_id}/edit`}> {pokemon.name} Edit Page</a> : '' }<br/>
-                        { pokemon? <a href={`/pokemon/${pokemon_id}`}>{pokemon.name} Show Page</a> : '' }
+                        <a href="/pokemon">Go to home page for Pokedex</a><br/>
+                        <a href="/pokemon/new">Create a New Pokemon</a><br/>
+                        { pokemon? <a href={`/pokemon/${pokemon._id}/edit`}> {pokemon.name} Edit Page</a> : ''}<br/>
+                        { pokemon? <a href={`/pokemon/${pokemon._id}`}>{pokemon.name} Show Page</a> : ''}
                     </nav>
                     <h1>
                         {title}
@@ -24,6 +24,6 @@ class Default extends React.Component {
             </html>
         )
     }
-};
+}
 
-module.exports = Default
+module.exports = Default 

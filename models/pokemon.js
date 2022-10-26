@@ -1,14 +1,17 @@
-const mongoose = require('mongoose');
+const mongoose = require('mongoose')
 
-//schema
+// Make a Schema 
 const pokemonSchema = new mongoose.Schema({
-    name: { type: String, required: true },
-    comment: { type: String, required: true },
-    image: { type: String, required: false }
-});
+    name: { type: String, required: true},
+    type: { type: String, required: true},
+    weakness: { type: String, required: true},
+    image: { type: String, required: true}
+})
 
-//make model 
+
+// Make A Model From The Schema 
+
 const Pokemon = mongoose.model('Pokemon', pokemonSchema)
+// Export the Model for Use in the App 
 
-//export model for use in app
 module.exports = Pokemon 

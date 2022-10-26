@@ -1,4 +1,4 @@
-const RESOURCE_PATH = '/pokemon';
+const RESOURCE_PATH = '/pokemon'
 
 const viewController = {
     index(req, res, next){
@@ -20,6 +20,7 @@ const viewController = {
         const pokemonID = req.params.id || res.locals.data.pokemon._id //short curcuit 
         res.redirect(`${RESOURCE_PATH}/${pokemonID}`)
     }
-};
+
+}
 
 module.exports = viewController
