@@ -30,9 +30,9 @@ const starterPokemon = [
 
 Pokemon.deleteMany({})
     .then(() => {
-        Fruit.create(starterPokemon)
+        Pokemon.create(starterPokemon)
             .then((createdPokemon) => {
-                console.log('created fruits:', createdPokemon)
+                console.log('created pokemon:', createdPokemon)
                 db.close()
             })
             .catch(err => {
