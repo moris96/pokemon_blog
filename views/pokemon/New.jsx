@@ -4,7 +4,7 @@ const Default = require('../layouts/Default.jsx')
 class New extends React.Component {
     render(){
         return (
-            <Default title="Create A New Pokemon">
+            <Default title="Create A New Blog Post">
             <form method="POST" action="/pokemon">
                 <h3>Post as:</h3><input type="text" name="name" placeholder='Your name here'></input><br/>
                 <h3>Comment:</h3> <input type="text" name="comment" placeholder='What are your thoughts?'></input><br/>

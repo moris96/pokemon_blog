@@ -5,16 +5,17 @@ class Index extends React.Component {
     render(){
         const {pokemons} = this.props
         return(
-            <Default title="Pokemon Index Page">
+            <Default title="Pokemon Blog Index Page">
+                
                 <a href="/">click to return to OG Index Page</a>
                 <ul>
                     {
                         pokemons.map((pokemon) => {
-                            const {name, type, _id} = pokemon 
+                            const {name, comment, _id} = pokemon 
                             return(
                                 <li key={_id}>
                                     <a href={`/pokemon/${_id}`}><br/>
-                                        {name}</a><p> is a {type} type</p>
+                                        {name}</a><p> {comment}</p> 
 
                                         <br/>
                                       

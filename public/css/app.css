@@ -1,0 +1,45 @@
+@import url('http://fonts.cdnfonts.com/css/pokemon-solid');
+/* font-family: 'Pokemon Solid', sans-serif; */
+
+body {
+    font-family: 'Pokemon Solid', sans-serif;
+    background-image: url(https://external-preview.redd.it/nIBSaLdr_qlU5r4x2mv2PxZpu2eXB0y06cQQrxANKco.png?width=640&crop=smart&format=pjpg&auto=webp&s=bcc90118972ec25992ede3318a88f36a4f9ee3d8);
+    background-size: cover;                
+    background-repeat: no-repeat;
+    background-position: center center;    
+}
+
+h1 {
+    text-align: center;
+}
+
+ul {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: 100px;
+    gap: 10px;
+}
+
+li {
+    list-style: none;
+}
+
+input[type=text] {
+    padding: .9em;
+    font-family: 'Pokemon Solid', sans-serif;
+    min-height:80px;
+    min-width: 1000px;
+}
+  
+input[type=submit] {
+    padding: .3em;
+    color: black;
+    background: mediumseagreen;
+    font-size: 1em;
+    border-radius: 10%;
+    font-family: 'Pokemon Solid', sans-serif;
+}
+
+#comments {
+    text-align: right;
+}
