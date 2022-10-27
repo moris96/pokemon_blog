@@ -9,6 +9,30 @@ body {
     background-position: center center;    
 }
 
+span {
+    position: absolute;
+    right: 0;
+    margin-right: 10px;
+    padding: 10px;
+}
+
+#signup {
+    margin-right: 20px;
+    color: black;
+}
+
+#login {
+    color: black;
+}
+
+a {
+    color: black;
+}
+
+a:hover {
+    color: whitesmoke;
+}
+
 h1 {
     text-align: center;
 }

@@ -11,6 +11,11 @@ class Default extends React.Component {
                 </head>
                 <body>
                     <nav>
+                        <span>
+                            <a id="signup" href="/user/signup">Signup</a>
+                            <a id="login" href="user/login">Login</a>
+                        </span>
+                        
                         <a href="/pokemon">Home Page</a><br/>
                         <a href="/pokemon/new">Create New Blog Post</a><br/>
                         { pokemon? <a href={`/pokemon/${pokemon._id}/edit`}> {pokemon.name} Edit Page</a> : ''}<br/>

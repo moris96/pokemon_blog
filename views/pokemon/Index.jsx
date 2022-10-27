@@ -6,8 +6,7 @@ class Index extends React.Component {
         const {pokemons} = this.props
         return(
             <Default title="Pokemon Blog Index Page">
-                <a href="/user/signup">Signup</a><br/>
-                <a href="user/login">Login</a><br/>
+                
                 <a href="/">click to return to OG Index Page</a>
                 <ul>
                     {
