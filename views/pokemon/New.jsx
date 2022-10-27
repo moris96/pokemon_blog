@@ -6,11 +6,11 @@ class New extends React.Component {
         return (
             <Default title="Create A New Pokemon">
             <form method="POST" action="/pokemon">
-                <h3>Name:</h3><input type="text" name="name" placeholder='Name of Pokemon Here'></input><br/>
-                <h3>Type:</h3> <input type="text" name="type" placeholder='Type of Pokemon Here'></input><br/>
-                <h3>Weaknesses:</h3> <input type="text" name="weakness" placeholder='Weaknesses of Pokemon Here'></input><br/>
-                <h3>Image:</h3> <input type="text" name="image" placeholder='insert img url' /><br/>
-                <br/><input type="submit" value="Submit Pokemon"></input>
+                <h3>Post as:</h3><input type="text" name="name" placeholder='Your name here'></input><br/>
+                <h3>Comment:</h3> <input type="text" name="comment" placeholder='What are your thoughts?'></input><br/>
+                <h3>Favorite Pokemon:</h3> <input type="text" name="favePoke" placeholder='Favorite Pokemon?'></input><br/>
+                <h3>Image:</h3> <input type="text" name="image" placeholder='insert img url (optional)' /><br/>
+                <br/><input type="submit" value="Submit Post"></input>
             </form>
             </Default>
         )

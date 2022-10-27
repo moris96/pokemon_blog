@@ -11,8 +11,8 @@ class Default extends React.Component {
                 </head>
                 <body>
                     <nav>
-                        <a href="/pokemon">Go to home page for Pokedex</a><br/>
-                        <a href="/pokemon/new">Create a New Pokemon</a><br/>
+                        <a href="/pokemon">Home Page</a><br/>
+                        <a href="/pokemon/new">Create New Blog Post</a><br/>
                         { pokemon? <a href={`/pokemon/${pokemon._id}/edit`}> {pokemon.name} Edit Page</a> : ''}<br/>
                         { pokemon? <a href={`/pokemon/${pokemon._id}`}>{pokemon.name} Show Page</a> : ''}
                     </nav>
