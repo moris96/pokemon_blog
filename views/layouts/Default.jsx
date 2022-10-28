@@ -10,6 +10,7 @@ class Default extends React.Component {
                     <title>{title}</title>
                 </head>
                 <body>
+                    
                     <nav>
                         <span>
                             <a id="signup" href="/user/signup">Signup</a>
@@ -25,6 +26,7 @@ class Default extends React.Component {
                         {title}
                     </h1>
                     {this.props.children}
+
                 </body>
             </html>
         )

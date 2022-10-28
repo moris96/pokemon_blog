@@ -12,6 +12,12 @@ class Show extends React.Component {
                 <h4 id='favePokemon'>{capName}'s favorite Pokemon is: {favePoke}</h4>
                 <img src={image} alt="" />
 
+                <h4 id="reply">Replies: {reply} </h4>
+                <form method="POST" action={`/pokemon/${_id}?_method=PUT`}>
+                    <h3 id="replies">Reply:</h3> <input id="replyForm" type="text" name="reply" placeholder='reply to this post'></input><br/>
+                    <input id="submitReply" type="submit" value={`Reply to ${name}`}/>
+                </form>
+
             </Default>
         )
     }

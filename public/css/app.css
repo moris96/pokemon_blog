@@ -3,10 +3,19 @@
 
 body {
     font-family: 'Pokemon Solid', sans-serif;
-    background-image: url(https://external-preview.redd.it/nIBSaLdr_qlU5r4x2mv2PxZpu2eXB0y06cQQrxANKco.png?width=640&crop=smart&format=pjpg&auto=webp&s=bcc90118972ec25992ede3318a88f36a4f9ee3d8);
+    background-image: url(https://external-preview.redd.it/nIBSaLdr_qlU5r4x2mv2PxZpu2eXB0y06cQQrxANKco.png?width=640&crop=smart&format=pjpg&auto=webp&s=bcc90118972ec25992ede3318a88f36a4f9ee3d8); 
     background-size: cover;                
     background-repeat: no-repeat;
-    background-position: center center;    
+    background-position: center center; 
+    background-attachment: fixed;
+}
+
+img {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
 }
 
 span {
@@ -21,8 +30,16 @@ span {
     color: black;
 }
 
+#signup:hover {
+    color: whitesmoke;
+}
+
 #login {
     color: black;
+}
+
+#login:hover {
+    color: whitesmoke;
 }
 
 a {
@@ -37,11 +54,15 @@ h1 {
     text-align: center;
 }
 
+h1:hover {
+    color: whitesmoke;
+}
+
 ul {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-auto-rows: 100px;
-    gap: 10px;
+    gap: 75px;
 }
 
 li {
@@ -58,7 +79,7 @@ input[type=text] {
 input[type=submit] {
     padding: .3em;
     color: black;
-    background: mediumseagreen;
+    background: aqua;
     font-size: 1em;
     border-radius: 10%;
     font-family: 'Pokemon Solid', sans-serif;
@@ -67,3 +88,31 @@ input[type=submit] {
 #comments {
     text-align: right;
 }
+
+h4 {
+    color: blue;
+}
+
+h4:hover {
+    color: whitesmoke;
+}
+
+#reply {
+    text-align: left;
+}
+
+/* #replies {
+    text-align: right;
+}
+
+#submitReply {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+
+}
+
+#replyForm {
+    position: absolute;
+    right: 0;
+} */
