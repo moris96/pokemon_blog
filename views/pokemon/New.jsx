@@ -10,7 +10,7 @@ class New extends React.Component {
                 <h3>Comment:</h3> <input type="text" name="comment" placeholder='What are your thoughts?'></input><br/>
                 <h3>Thoughts:</h3> <input type="text" name="thoughts" placeholder='Got other thoughts?'></input><br/>
                 <h3>Favorite Pokemon:</h3> <input type="text" name="favePoke" placeholder='Favorite Pokemon?'></input><br/>
-                <h3>Image:</h3> <input type="text" name="image" placeholder='insert img url (optional)' /><br/>
+                <h3>Image:</h3> <input type="text" name="image" placeholder='insert img url (optional-file path must be image type like .png or .jpg)' /><br/>
                 <br/><input type="submit" value="Submit Post"></input>
             </form>
             </Default>
