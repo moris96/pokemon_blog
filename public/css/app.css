@@ -1,5 +1,4 @@
 @import url('http://fonts.cdnfonts.com/css/pokemon-solid');
-/* font-family: 'Pokemon Solid', sans-serif; */
 
 body {
     font-family: 'Pokemon Solid', sans-serif;
@@ -60,10 +59,14 @@ h1:hover {
 
 ul {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-auto-rows: 100px;
-    gap: 75px;
+    grid-template-columns: auto auto auto auto;
 }
+
+#grid > div {
+    padding: 20px 0;
+}
+
+
 
 li {
     list-style: none;
@@ -98,28 +101,25 @@ h4:hover {
     color: whitesmoke;
 }
 
-#reply {
-    text-align: right;
-    color: black;
+/* #og {
+    position: relative;
+    left: 0;
+    bottom: 0;
+} */
+
+#forum {
+    position: absolute;
+    left: 850px;
+    top: 800px;
+}
+
+img {
+    width: 100%;
+    height: 100%;
+}
+
+#here {
+    position: relative;
+    top: 200px;
     font-weight: lighter;
 }
-
-#reply:hover {
-    color: whitesmoke;
-}
-
-/* #replies {
-    text-align: right;
-}
-
-#submitReply {
-    position: absolute;
-    right: 0;
-    bottom: 0;
-
-}
-
-#replyForm {
-    position: absolute;
-    right: 0;
-} */

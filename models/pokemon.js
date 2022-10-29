@@ -6,6 +6,7 @@ const pokemonSchema = new mongoose.Schema({
     favePoke: { type: String, required: false},
     image: { type: String, required: false},
     comment: { type: String, required: true },
+    thoughts: { type: String, required: false },
     replies: [{ type: mongoose.Types.ObjectId, ref: "Reply" }]
 })
 

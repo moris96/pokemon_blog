@@ -6,7 +6,7 @@ const Pokemon = require('./pokemon')
 
 const starterPokemon = [
   {
-    name: 'Trainer Red', favePoke: 'Pikachu', image: "", comment: "I am the true champion of Kanto"
+    name: 'Trainer Red', favePoke: 'Pikachu', image: "https://i1.sndcdn.com/artworks-000193803962-tla7ov-t500x500.jpg", comment: "I am the true champion of Kanto"
   }
   
 ]

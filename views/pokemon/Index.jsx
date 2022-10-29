@@ -20,7 +20,7 @@ class Index extends React.Component {
                                         <img src={image} alt="" />
 
                                         <br/>
-                                      
+                                        
                                         <form method="POST" action={`/pokemon/${_id}?_method=DELETE`}>
                                             <input type="submit" value={`Delete ${name}`}/>
                                         </form>
