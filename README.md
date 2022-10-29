@@ -17,15 +17,29 @@
 * Mongoose 
 * MongoDB
 * Express
-* Google Fonts 
+* React 
+* Google Fonts (CDC Fonts)
 
 ---
 
-## ERD: (upload screenshot of it)
+## ERD: 
+![](/images/erd.png)
+trello workboard link: [trello](https://trello.com/b/bCob98Ys/pokemon)
 
 ---
 
 ## Project Screenshots:
+### Index Page: 
+![](/images/indexPage.png)
+
+### Show Page: 
+![](/images/showPage.png)
+
+### Create New Blog Page: 
+![](/images/newPoke.png)
+
+### Edit Blog Page:
+![](/images/editPoke.png)
 
 ---
 
@@ -42,7 +56,75 @@
 * pokemon model (for new page)
 * seed (for seed: deleting & replacing everything in database)
 
-### continue readme 
+### Pokemon Models Include:
+* user name 
+* favorite pokemon
+* image
+* user initial comment
+* user thoughts 
+* replies (anyone can add a reply)
+
+### User Model Includes: 
+* user name 
+* user password 
+
+### CRUD:
+#### This app takes advantage of methods and functions within express and Mongoose. To get to a page you wants, we call the .find() function 
+```JavaScript
+Pokemon.find({}, (err, foundPokemons) => {
+            if(err){
+               res.status(400).send({
+                msg: err.message
+               }) 
+            } else {
+                res.locals.data.pokemons = foundPokemons
+                next()
+            }
+        })
+```
+#### Replies: In order for all users to reply to an individual post made by another user, we use the addReply function to give permission to all, and replies are displayed in the MongoDB (mongo database)
+```JavaScript
+addReply(req, res, next){
+        Pokemon.findById(req.params.id, (err, foundPokemon)=> {
+            if(err){
+                res.status(400).send({
+                    msg: err.message
+                })
+            } else {
+                Reply.create(req.body)
+                .then((createdReply) => {
+                    foundPokemon.replies.addToSet(createdReply)
+                    foundPokemon.save()
+                    res.locals.data.pokemon = foundPokemon
+                    next()
+                }).catch((err) => {
+                    res.status(400).send({
+                        msg: err.message
+                    })
+                })
+            }
+        })
+``` 
+
+#### Create: We use the create() function to create a new blog post. 
+```JavaScript
+create(req, res, next){
+        req.body.readyToEat = req.body.readyToEat === 'on'? true : false;
+        Pokemon.create(req.body, (err, createdPokemon)=> {
+            if(err){
+                res.status(400).send({
+                    msg: err.message
+                })
+            } else {
+                res.locals.data.pokemon = createdPokemon
+                next()
+            }
+        })
+```
+
+#### Note: The 400 error messages is used to display errors on the browser in the event an error has occured with the HTTP Request. 
+
+# add all crud stuff (from data controller)
 
 ---
 
@@ -62,3 +144,15 @@ HTTP Verb | URL | JSX view filename
 --- | --- | --- | 
 GET | /user/login | LogIn.jsx 
 GET | user/signup | SignUp.jsx
+
+---
+
+## Key Learnings / Takeaways: 
+
+---
+
+## Challenges: 
+
+--- 
+
+## I love Pokemon. It's my favorite video game franchise since I was 6 years old. The first game I played was Crystal Version on the Game Boy Color, but my favorite game is Emerald Version which I still replay many times a year to this day on my GBA SP (Gameboy Advanced SP). Pokemon in my opinion is the greatest video game franchise in history, and it's super fun to play. I recommend starting with Fire Red / Leaf Green version as they are remakes of the original Red/Blue/Green games, but with generation 3 graphics and additional story content. 
