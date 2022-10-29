@@ -24,6 +24,10 @@ router.get('/api/:id', dataController.show, apiController.show)
 router.get('/', dataController.index, viewController.index)
 // New
 router.get('/new', viewController.newView)
+
+//add reply 
+router.patch('/addreply/:id', dataController.addReply, viewController.redirectShow)
+
 // Delete
 router.delete('/:id', dataController.destroy, viewController.redirectHome)
 // Update

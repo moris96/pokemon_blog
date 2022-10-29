@@ -3,7 +3,7 @@ const Default = require('../layouts/Default.jsx')
 
 class Show extends React.Component {
     render(){
-        const {name, comment, favePoke, image, reply, _id} = this.props.pokemon
+        const {name, comment, favePoke, image, replies, _id} = this.props.pokemon
         const capName = name[0].toUpperCase() + name.substring(1)
         return(
             <Default title={`${capName}'s Post`} pokemon={this.props.pokemon}>
@@ -12,11 +12,18 @@ class Show extends React.Component {
                 <h4 id='favePokemon'>{capName}'s favorite Pokemon is: {favePoke}</h4>
                 <img src={image} alt="" />
 
-                <h4 id="reply">Replies: {reply} </h4>
-                <form method="POST" action={`/pokemon/${_id}?_method=PUT`}>
-                    <h3 id="replies">Reply:</h3> <input id="replyForm" type="text" name="reply" placeholder='reply to this post'></input><br/>
+                <h4 className='replies'>Replies: {replies? replies.map((reply) => {
+                    return(
+                        <div key={reply._id}>
+                            {reply.text}
+                        </div>
+                    )
+                }) : ""} </h4>
+                <form method="POST" action={`/pokemon/addreply/${_id}?_method=PATCH`}>
+                    <h3 className="replies">Reply:</h3> <input id="replyForm" type="text" name="text" placeholder='reply to this post'></input><br/>
                     <input id="submitReply" type="submit" value={`Reply to ${name}`}/>
                 </form>
+                
 
             </Default>
         )

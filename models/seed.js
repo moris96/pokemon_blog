@@ -5,25 +5,6 @@ const Pokemon = require('./pokemon')
 
 /*
 const starterPokemon = [
-  {
-    name: 'Apple', color: 'red', readyToEat: true
-  },
-  {
-
-    name: 'Orange', color: 'orange', readyToEat: true
-  },
-  {
-
-    name: 'Coconut', color: 'brown', readyToEat: true
-  },
-  {
-
-    name: 'Grapes', color: 'red', readyToEat: true
-  },
-  {
-
-    name: 'Pear', color: 'green', readyToEat: false
-  }
 ]
 */
 

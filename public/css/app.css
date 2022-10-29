@@ -91,6 +91,7 @@ input[type=submit] {
 
 h4 {
     color: blue;
+    font-weight: lighter;
 }
 
 h4:hover {
@@ -98,7 +99,13 @@ h4:hover {
 }
 
 #reply {
-    text-align: left;
+    text-align: right;
+    color: black;
+    font-weight: lighter;
+}
+
+#reply:hover {
+    color: whitesmoke;
 }
 
 /* #replies {

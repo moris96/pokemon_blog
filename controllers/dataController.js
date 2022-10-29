@@ -1,5 +1,5 @@
-const { update } = require('../models/pokemon')
 const Pokemon = require('../models/pokemon')
+const Reply = require('../models/reply')
 
 const dataController = {
     //Index,
@@ -42,6 +42,28 @@ const dataController = {
             }
         })
     },
+    //function addReply() ; find pokemon, create reply, add created reply to pokemon 
+    addReply(req, res, next){
+        Pokemon.findById(req.params.id, (err, foundPokemon)=> {
+            if(err){
+                res.status(400).send({
+                    msg: err.message
+                })
+            } else {
+                Reply.create(req.body)
+                .then((createdReply) => {
+                    foundPokemon.replies.addToSet(createdReply)
+                    foundPokemon.save()
+                    res.locals.data.pokemon = foundPokemon
+                    next()
+                }).catch((err) => {
+                    res.status(400).send({
+                        msg: err.message
+                    })
+                })
+            }
+        })
+    },
     //Create
     create(req, res, next){
         req.body.readyToEat = req.body.readyToEat === 'on'? true : false;
@@ -59,7 +81,7 @@ const dataController = {
     //Edit
     //Show
     show(req, res, next){
-        Pokemon.findById(req.params.id,(err, foundPokemon) => {
+        Pokemon.findById(req.params.id).populate("replies").exec((err, foundPokemon) => {
             if(err){
                 res.status(404).send({
                     msg: err.message,
