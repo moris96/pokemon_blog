@@ -5,7 +5,7 @@ const Default = require('../layouts/Default')
 class Login extends React.Component {
   render () {
     return (
-      <Default title="Login to Pokemon Account">
+      <Default title="Login to Pokemon Blog Account">
         <form action='/user/login' method='POST'>
           <fieldset>
             <legend>New User</legend>
