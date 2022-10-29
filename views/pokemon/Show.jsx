@@ -10,9 +10,9 @@ class Show extends React.Component {
                 <h4 id='commenter'>Commenter: {capName}</h4>
                 <h4 id='post'>{comment}</h4>
                 <h4 id='favePokemon'>{capName}'s favorite Pokemon is: {favePoke}</h4>
-                <img src={image} alt="" />
+                
 
-                <h4 className='replies'>Replies: {replies? replies.map((reply) => {
+                <h4 className="replies">Replies: {replies? replies.map((reply) => {
                     return(
                         <div key={reply._id}>
                             {reply.text}
@@ -20,9 +20,11 @@ class Show extends React.Component {
                     )
                 }) : ""} </h4>
                 <form method="POST" action={`/pokemon/addreply/${_id}?_method=PATCH`}>
-                    <h3 className="replies">Reply:</h3> <input id="replyForm" type="text" name="text" placeholder='reply to this post'></input><br/>
+                    <h3 className="reply">Leave a Reply:</h3> <input id="replyForm" type="text" name="text" placeholder='reply to this post'></input><br/>
                     <input id="submitReply" type="submit" value={`Reply to ${name}`}/>
                 </form>
+
+                <img src={image} alt="" />
                 
 
             </Default>
