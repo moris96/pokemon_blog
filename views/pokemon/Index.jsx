@@ -7,15 +7,16 @@ class Index extends React.Component {
         return(
             <Default title="Pokemon Blog Index Page">
                 
-                <a href="/">click to return to OG Index Page</a>
+                <a id='og' href="/">click to return to OG Index Page</a>
                 <ul>
                     {
                         pokemons.map((pokemon) => {
-                            const {name, comment, image, _id} = pokemon 
+                            const {name, comment, image, favePoke, _id} = pokemon 
                             return(
                                 <li key={_id}>
                                     <a href={`/pokemon/${_id}`}><br/>
                                         {name}</a><p> {comment}</p> 
+                                        <p>{name}'s favorite Pokemon is: {favePoke}</p>
                                         <img src={image} alt="" />
 
                                         <br/>
