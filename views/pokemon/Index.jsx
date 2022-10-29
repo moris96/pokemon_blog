@@ -11,11 +11,12 @@ class Index extends React.Component {
                 <ul>
                     {
                         pokemons.map((pokemon) => {
-                            const {name, comment, _id} = pokemon 
+                            const {name, comment, image, _id} = pokemon 
                             return(
                                 <li key={_id}>
                                     <a href={`/pokemon/${_id}`}><br/>
                                         {name}</a><p> {comment}</p> 
+                                        <img src={image} alt="" />
 
                                         <br/>
                                       
