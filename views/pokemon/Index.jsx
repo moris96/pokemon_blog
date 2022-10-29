@@ -17,7 +17,11 @@ class Index extends React.Component {
                                     <a href={`/pokemon/${_id}`}><br/>
                                         {name}</a><p> {comment}</p> 
                                         <p>{name}'s favorite Pokemon is: {favePoke}</p>
+                                        
+                                        
                                         <img src={image} alt="" />
+                                        
+                                        
 
                                         <br/>
                                         

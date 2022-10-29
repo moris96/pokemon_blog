@@ -60,13 +60,10 @@ h1:hover {
 ul {
     display: grid;
     grid-template-columns: auto auto auto auto;
+    grid-gap: 200px;
+    padding: 10px;
+    padding-bottom: 10px;
 }
-
-#grid > div {
-    padding: 20px 0;
-}
-
-
 
 li {
     list-style: none;
@@ -113,9 +110,24 @@ h4:hover {
     top: 800px;
 }
 
-img {
+/* #img-cont {
     width: 100%;
-    height: 100%;
+    height: auto;
+    vertical-align: middle;
+    display: flex;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    
+} */
+
+img {
+    float: middle;
+    width:  250px;
+    height: 250px;
+    object-fit: cover;
 }
 
 #here {
