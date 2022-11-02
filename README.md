@@ -41,6 +41,12 @@ trello workboard link: [trello](https://trello.com/b/bCob98Ys/pokemon)
 ### Edit Blog Page:
 ![](/images/editPoke.png)
 
+### Login Page: 
+![](/images/login.png)
+
+### Singup Page:
+![](/images/singup.png)
+
 ---
 
 ## Code Discussion:
@@ -106,7 +112,7 @@ addReply(req, res, next){
         })
 ``` 
 
-#### Create: We use the create() function to create a new blog post. 
+#### Create: We use the create() function to create a new blog post 
 ```JavaScript
 create(req, res, next){
         req.body.readyToEat = req.body.readyToEat === 'on'? true : false;
@@ -122,9 +128,73 @@ create(req, res, next){
         })
 ```
 
-#### Note: The 400 error messages is used to display errors on the browser in the event an error has occured with the HTTP Request. 
+#### Index: Shows user's created blog post on index page 
+```JavaScript
+index(req, res, next){
+        Pokemon.find({ username: req.session.username }, (err, foundPokemons) => {
+            if(err){
+               res.status(400).send({
+                msg: err.message
+               }) 
+            } else {
+                res.locals.data.pokemons = foundPokemons
+                next()
+            }
+        })
+    }
+```
 
-# add all crud stuff (from data controller)
+#### Destroy: User deletes a blog post with delete button 
+```JavaScript
+destroy(req, res, next){
+        Pokemon.findByIdAndDelete(req.params.id, (err, deletedPokemon) => {
+            if(err){
+                res.status(400).send({
+                    msg: err.message
+                })
+            } else {
+                res.locals.data.pokemon = deletedPokemon
+                next()
+            }
+        })
+    }
+```
+
+#### Update: User edits a blog post on edit page 
+```JavaScript
+update(req, res, next){
+        req.body.readyToEat = req.body.readyToEat === 'on'? true : false;
+        Pokemon.findByIdAndUpdate(req.params.id, req.body, { new: true }, (err, updatedPokemon)=> {
+            if(err){
+                res.status(400).send({
+                    msg: err.message
+                })
+            } else {
+                res.locals.data.pokemon = updatedPokemon
+                next()
+            }
+        })
+    }
+```
+
+#### Show: Shows a user blog post on show page (the blog post itself) with replies functionality 
+```JavaScript
+show(req, res, next){
+        Pokemon.findById(req.params.id).populate("replies").exec((err, foundPokemon) => {
+            if(err){
+                res.status(404).send({
+                    msg: err.message,
+                    output: 'Could not find a pokemon with that ID'
+                })
+            } else {
+                res.locals.data.pokemon = foundPokemon
+                next()
+            }
+        })
+    }
+```
+
+#### Note: The 400 error messages is used to display errors on the browser in the event an error has occured with the HTTP Request. 
 
 ---
 
@@ -143,21 +213,29 @@ Destroy | /pokemon/:id | DELETE | none | Pokemon.findByIdAndRemove or Pokemon.fi
 HTTP Verb | URL | JSX view filename  
 --- | --- | --- | 
 GET | /user/login | LogIn.jsx 
-GET | user/signup | SignUp.jsx
+GET | /user/signup | SignUp.jsx
 
 ---
 
 ## Key Learnings / Takeaways: 
+* Learned how the internet and websites work 
+* Learned more about Node, JSX, express, mongoose, React (bulk of the backend work)
+* Learned how to connect server to database 
+* Understood the simplicity of using Jsx templates for pages 
 
 ---
 
 ## Challenges: 
+* CSS & Styling (My strength lies in backend work lol)
+    * Getting the images on the index page to be the same size (biggest CSS problem I faced!)
+* Getting the user login/signup pages to work 
+* Getting the replies button to work to show multiples replies (even in database) instead of just 1 
 
 --- 
 
 # My love for Pokemon: 
 
-### I love Pokemon. It's my favorite video game franchise since I was 6 years old. The first game I played was Crystal Version on the Game Boy Color, but my favorite game is Emerald Version which I still replay many times a year to this day on my GBA SP (Gameboy Advanced SP). Pokemon in my opinion is the greatest video game franchise in history, and it's super fun to play. I recommend starting with Fire Red / Leaf Green version as they are remakes of the original Red/Blue/Green games, but with generation 3 graphics and additional story content. The reason I aspire to be a game developer is because of Pokemon. 
+### I love Pokemon. It's my favorite video game franchise since I was 6 years old. The first game I played was Crystal Version on the Game Boy Color, but my favorite game is Emerald Version which I still replay many times a year to this day on my GBA SP (Gameboy Advanced SP). Pokemon in my opinion is the greatest video game franchise in history, and it's super fun to play. I recommend starting with Fire Red / Leaf Green version as they are remakes of the original Red/Blue/Green games, but with generation 3 graphics and additional story content. 
 
 ## Credits to Satoshi Tajiri for creating Pokemon! 
 
@@ -176,3 +254,8 @@ I'd say I'm a Dragon/Water type trainer. Great combo btw.
 3. Platinum 
 4. Fire Red / Leaf Green (they are both the same lol)
 5. Heart Gold / Soul Silver (only difference is main legendary lol)
+
+--- 
+
+### How websites like twitter, this project, and etc work: 
+![](/images/workflow.png)
