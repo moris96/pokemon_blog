@@ -39,10 +39,11 @@ app.use('/user', require('./controllers/authController'))
 /* END Middleware */
 
 // Tell the app to listen on a port
-app.listen(3000, () => {
-  console.log('Listening on Port 3000')
-})
+// app.listen(3000, () => {
+//   console.log('Listening on Port 3000')
+// })
 
-// app.listen(process.env.PORT || 3000, function(){
-//   console.log("Express server listening on port %d in %s mode", this.address().port, app.settings.env);
-// });
+const PORT = process.env.PORT || 3000
+app.listen(PORT, () => {
+  console.log(`Listening on port ${PORT}`)
+})
