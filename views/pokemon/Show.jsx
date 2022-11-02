@@ -3,7 +3,7 @@ const Default = require('../layouts/Default.jsx')
 
 class Show extends React.Component {
     render(){
-        const {name, comment, favePoke, image, thoughts, replies, _id} = this.props.pokemon
+        const {name, comment, favePoke, image, video, thoughts, replies, _id} = this.props.pokemon
         const capName = name[0].toUpperCase() + name.substring(1)
         return(
             <Default title={`${capName}'s Post`} pokemon={this.props.pokemon}>
