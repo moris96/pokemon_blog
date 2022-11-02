@@ -58,6 +58,9 @@ router.post('/login', async (req, res) => {
           // compare password
           const result = await bcrypt.compare(password, user.password)
           if (result) {
+            // store some properties in the session object
+            req.session.username = username
+            req.session.loggedIn = true
             // redirect to pokemon page if successful
             res.redirect('/pokemon')
           } else {
@@ -75,6 +78,18 @@ router.post('/login', async (req, res) => {
         res.json({ error })
       })
   })
+
+router.get('/logout', (req, res) => {
+  // destroy session and redirect to main page
+  req.session.destroy((err) => {
+    if (err) {
+      console.error(err)
+      res.status(500).json(err)
+    } else {
+      res.redirect('/')
+    }    
+  })
+})
 
 /// ///////////////////////////////////////
 // Export the Router

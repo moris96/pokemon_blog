@@ -4,7 +4,7 @@ const Reply = require('../models/reply')
 const dataController = {
     //Index,
     index(req, res, next){
-        Pokemon.find({}, (err, foundPokemons) => {
+        Pokemon.find({ username: req.session.username }, (err, foundPokemons) => {
             if(err){
                res.status(400).send({
                 msg: err.message
@@ -67,6 +67,7 @@ const dataController = {
     //Create
     create(req, res, next){
         req.body.readyToEat = req.body.readyToEat === 'on'? true : false;
+        req.body.username = req.session.username
         Pokemon.create(req.body, (err, createdPokemon)=> {
             if(err){
                 res.status(400).send({
