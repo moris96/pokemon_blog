@@ -39,11 +39,11 @@ app.use('/user', require('./controllers/authController'))
 /* END Middleware */
 
 // Tell the app to listen on a port
-// app.listen(3000, () => {
-//   console.log('Listening on Port 3000')
-// })
-
-const PORT = process.env.PORT || 3000
-app.listen(PORT, () => {
-  console.log(`Listening on port ${PORT}`)
+app.listen(3000, () => {
+  console.log('Listening on Port 3000')
 })
+
+// const PORT = process.env.PORT || 3000
+// app.listen(PORT, () => {
+//   console.log(`Listening on port ${PORT}`)
+// })
