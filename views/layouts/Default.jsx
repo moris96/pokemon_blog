@@ -15,6 +15,7 @@ class Default extends React.Component {
                         <span>
                             <a id="signup" href="/user/signup">Signup</a>
                             <a id="login" href="user/login">Login</a>
+                            <a id="logout" href="/user/logout">Logout</a>
                         </span>
                         
                         <a href="/pokemon">Home Page</a><br/>
