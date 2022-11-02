@@ -7,6 +7,7 @@ const session = require("express-session");
 const MongoStore = require("connect-mongo");
 const db = require('./models/db')
 const app = express()
+const PORT = process.env.PORT || 3000
 
 // Configure the app (app.set)
 /* Start Config */
@@ -39,6 +40,6 @@ app.use('/user', require('./controllers/authController'))
 /* END Middleware */
 
 // Tell the app to listen on a port
-app.listen(3000, () => {
+app.listen(PORT, () => {
   console.log('Listening on Port 3000')
 })
