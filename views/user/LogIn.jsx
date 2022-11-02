@@ -8,7 +8,7 @@ class Login extends React.Component {
       <Default title="Login to Pokemon Blog Account">
         <form action='/user/login' method='POST'>
           <fieldset>
-            <legend>New User</legend>
+            <legend>Returning User</legend>
             <label>USERNAME: <input type='text' name='username' required placeholder='enter username' /> </label>
             <label>PASSWORD: <input type='password' name='password' required placeholder='enter password' />
             </label>
