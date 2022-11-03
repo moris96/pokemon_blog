@@ -2,8 +2,10 @@
 
 @font-face {
     font-family: 'Pokemon Solid', sans-serif;
-    src: url('http://fonts.cdnfonts.com/css/pokemon-solid');
-    src: url('http://fonts.cdnfonts.com/css/pokemon-solid');
+    src: url('http://fonts.cdnfonts.com/css/pokemon-solid') format('woff2');
+    src: url('http://fonts.cdnfonts.com/css/pokemon-solid') format('woff');
+    src: url('http://fonts.cdnfonts.com/css/pokemon-solid') format('truetype');
+    font-display: optional;
 }
 
 body {
