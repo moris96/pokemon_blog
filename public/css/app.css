@@ -3,12 +3,11 @@
 @font-face {
     font-family: 'Pokemon Solid', sans-serif;
     src: url('http://fonts.cdnfonts.com/css/pokemon-solid');
+    src: url('http://fonts.cdnfonts.com/css/pokemon-solid');
 }
 
 body {
     font-family: 'Pokemon Solid', sans-serif;
-    src: font_url('http://fonts.cdnfonts.com/css/pokemon-solid');
-    src: font_url('http://fonts.cdnfonts.com/css/pokemon-solid');
     background-image: url(https://external-preview.redd.it/nIBSaLdr_qlU5r4x2mv2PxZpu2eXB0y06cQQrxANKco.png?width=640&crop=smart&format=pjpg&auto=webp&s=bcc90118972ec25992ede3318a88f36a4f9ee3d8); 
     background-size: cover;                
     background-repeat: no-repeat;
