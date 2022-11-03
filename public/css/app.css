@@ -112,6 +112,12 @@ h4:hover {
 #forum {
     position: absolute;
     left: 850px;
+    top: 500px;
+}
+
+#github {
+    position: absolute;
+    left: 900px;
     top: 800px;
 }
 
