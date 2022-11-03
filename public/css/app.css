@@ -1,7 +1,7 @@
 @import url('http://fonts.cdnfonts.com/css/pokemon-solid');
 
 @font-face {
-    font-family: 'Pokemon Solid', sans-serif;
+    font-family: 'Pokemon Solid', sans-serif, monospace;
     src: url('http://fonts.cdnfonts.com/css/pokemon-solid') format('woff2');
     src: url('http://fonts.cdnfonts.com/css/pokemon-solid') format('woff');
     src: url('http://fonts.cdnfonts.com/css/pokemon-solid') format('truetype');
