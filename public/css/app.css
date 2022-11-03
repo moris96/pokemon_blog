@@ -2,6 +2,7 @@
 
 body {
     font-family: 'Pokemon Solid', sans-serif;
+    src: font_url('http://fonts.cdnfonts.com/css/pokemon-solid');
     background-image: url(https://external-preview.redd.it/nIBSaLdr_qlU5r4x2mv2PxZpu2eXB0y06cQQrxANKco.png?width=640&crop=smart&format=pjpg&auto=webp&s=bcc90118972ec25992ede3318a88f36a4f9ee3d8); 
     background-size: cover;                
     background-repeat: no-repeat;
@@ -101,30 +102,11 @@ h4:hover {
     color: whitesmoke;
 }
 
-/* #og {
-    position: relative;
-    left: 0;
-    bottom: 0;
-} */
-
 #forum {
     position: absolute;
     left: 850px;
     top: 800px;
 }
-
-/* #img-cont {
-    width: 100%;
-    height: auto;
-    vertical-align: middle;
-    display: flex;
-}
-
-img {
-    max-width: 100%;
-    height: auto;
-    
-} */
 
 img {
     float: middle;
