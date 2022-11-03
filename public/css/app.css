@@ -5,7 +5,7 @@
     src: url('http://fonts.cdnfonts.com/css/pokemon-solid') format('woff2');
     src: url('http://fonts.cdnfonts.com/css/pokemon-solid') format('woff');
     src: url('http://fonts.cdnfonts.com/css/pokemon-solid') format('truetype');
-    font-display: optional;
+    font-display: optional; 
 }
 
 body {
