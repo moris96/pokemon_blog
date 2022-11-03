@@ -5,7 +5,7 @@
 ---
 
 ## Getting Started:
-#### Click here (add heroku link once deployed) to get started. You might have to wait a minute or two for Heroku to warmup...
+#### [Click Me](https://pokemonblog.herokuapp.com/) to get started. You might have to wait a minute or two for Heroku to warmup depending on your internet speed...
 
 ---
 
