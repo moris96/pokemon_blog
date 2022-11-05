@@ -252,9 +252,9 @@ GET | /user/signup | SignUp.jsx
 ## My top 5 favorite Pokemon are: 
 1. Rayquaza
 2. Dragonite 
-3. Mudkip 
+3. Evee
 4. Flygon 
-5. Squirtle 
+5. Mudkip
 
 I'd say I'm a Dragon/Water type trainer. Great combo btw. 
 
