@@ -245,7 +245,7 @@ GET | /user/signup | SignUp.jsx
 
 # My love for Pokemon: 
 
-### I love Pokemon. It's my favorite video game franchise since I was 6 years old. The first game I played was Crystal Version on the Game Boy Color, but my favorite game is Emerald Version which I still replay many times a year to this day on my GBA SP (Gameboy Advanced SP). Pokemon in my opinion is the greatest video game franchise in history, and it's super fun to play. I recommend starting with Fire Red / Leaf Green version as they are remakes of the original Red/Blue/Green games, but with generation 3 graphics and additional story content. 
+### I love Pokemon. It's my favorite video game franchise since I was 6 years old. The first game I played was Crystal Version on the Game Boy Color, but my favorite game is Emerald Version which I still replay many times a year to this day on my GBA SP (Gameboy Advanced SP). Pokemon in my opinion is the greatest video game franchise in history, and it's super fun to play. I recommend starting with Let's Go Evee / Let's Go Pikachu on Nintendo Switch - good homage to gen 1. 
 
 ## Credits to Satoshi Tajiri for creating Pokemon! 
 
